@@ -1,0 +1,4 @@
+1.add logging.
+2.implement polling
+3.folder structure improvement
+4.RAG

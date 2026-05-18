@@ -1,260 +1,101 @@
 import os
+
 import streamlit as st
-import google.generativeai as genai
-from dotenv import load_dotenv
-from serpapi import GoogleSearch
-from docx import Document
-from datetime import datetime
+
+from agents.professor_agent import ProfessorAgent
+from agents.advisor_agent import AdvisorAgent
+from agents.librarian_agent import LibrarianAgent
+from agents.ta_agent import TeachingAssistantAgent
+
+from utils.doc_generator import create_doc
+from utils.logger import logger
+from RAG.rag import ask_question
 
 
-load_dotenv()
-
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-SERPAPI_API_KEY = os.getenv("SERPAPI_API_KEY")
-
-# =========================
-# Gemini CLIENT
-# =========================
-genai.configure(api_key=GEMINI_API_KEY)
-
-model = genai.GenerativeModel("gemini-2.5-flash")
-
-# =========================
-# STREAMLIT CONFIG
-# =========================
 st.set_page_config(
     page_title="AI Teaching Agent Team",
     layout="wide"
 )
 
 st.title("👨‍🏫 AI Teaching Agent Team")
+
 st.markdown("""
 A collaborative AI teaching system where multiple AI agents work together like a professional teaching faculty.
-
-### Agents:
--  Professor Agent
--  Academic Advisor Agent
--  Research Librarian Agent
--  Teaching Assistant Agent
 """)
 
 
-if "generated" not in st.session_state:
-    st.session_state.generated = False
+if "outputs" not in st.session_state:
 
+    st.session_state.outputs = {}
 
-topic = st.text_input(
-    "Enter a topic you want to learn",
-    placeholder="Example: Machine Learning"
-)
+if "messages" not in st.session_state:
 
-generate_btn = st.button(" Generate Learning Plan")
+    st.session_state.messages = []
 
 
 
-  
-def ask_ai(system_prompt, user_prompt):
+def generate_learning_package(topic):
 
-    full_prompt = f"""
-    {system_prompt}
+    try:
 
-    User Request:
-    {user_prompt}
-    """
+        logger.info(f"Generation started for topic: {topic}")
 
-    response = model.generate_content(full_prompt)
-
-    return response.text
-   
-
-
-def search_resources(topic):
-
-    if not SERPAPI_API_KEY:
-        return "SERPAPI KEY NOT FOUND"
-
-    params = {
-        "engine": "google",
-        "q": f"best resources to learn {topic}",
-        "api_key": SERPAPI_API_KEY,
-        "num": 10
-    }
-
-    search = GoogleSearch(params)
-    results = search.get_dict()
-
-    resources = []
-
-    if "organic_results" in results:
-
-        for item in results["organic_results"][:10]:
-
-            title = item.get("title", "No Title")
-            link = item.get("link", "")
-            snippet = item.get("snippet", "")
-
-            resources.append(
-                f"""
-Title: {title}
-
-Link: {link}
-
-Description: {snippet}
-"""
-            )
-
-    return "\n\n".join(resources)
-
-
-def create_doc(title, content, filename):
-
-    doc = Document()
-
-    doc.add_heading(title, level=1)
-
-    doc.add_paragraph(
-        f"Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
-    )
-
-    doc.add_paragraph("")
-
-    lines = content.split("\n")
-
-    for line in lines:
-
-        line = line.strip()
-
-        if not line:
-            continue
-
-        if line.startswith("# "):
-            doc.add_heading(line.replace("# ", ""), level=1)
-
-        elif line.startswith("## "):
-            doc.add_heading(line.replace("## ", ""), level=2)
-
-        elif line.startswith("### "):
-            doc.add_heading(line.replace("### ", ""), level=3)
-
-        else:
-            doc.add_paragraph(line)
-
-    doc.save(filename)
-
-
-
-if generate_btn and topic:
-
-    with st.spinner(" AI Agents are collaborating..."):
-
-       
-        professor_prompt = f"""
-You are Professor Agent.
-
-Your job:
-Create a COMPLETE knowledge base document for learning {topic}.
-
-Requirements:
-- Beginner friendly
-- Structured properly
-- Use headings and subheadings
-- Include examples
-- Include real world applications
-- Include important terminology
-- Include summary section
-- Include advanced concepts
-
-Format properly using markdown headings.
-"""
-
-        professor_output = ask_ai(
-            professor_prompt,
-            f"Create a complete knowledge base for {topic}"
+        # SAFE TOPIC NAME
+        safe_topic = (
+            topic.lower()
+            .replace(" ", "_")
+            .replace("/", "_")
+            .replace("\\", "_")
         )
 
-       
-
-        advisor_prompt = f"""
-You are Academic Advisor Agent.
-
-Create a complete learning roadmap for {topic}.
-
-Requirements:
-- Beginner to advanced roadmap
-- Weekly milestones
-- Time estimates
-- Prerequisites
-- Project recommendations
-- Interview preparation roadmap
-- Revision strategy
-
-Use proper markdown headings.
-"""
-
-        advisor_output = ask_ai(
-            advisor_prompt,
-            f"Create a learning roadmap for {topic}"
+        # TOPIC FOLDER
+        topic_folder = os.path.join(
+            "generated_docs",
+            safe_topic
         )
 
-       
+        os.makedirs(topic_folder, exist_ok=True)
 
-        resources = search_resources(topic)
+        # AGENTS
+        professor_agent = ProfessorAgent()
 
-        librarian_prompt = f"""
-You are Research Librarian Agent.
+        advisor_agent = AdvisorAgent()
 
-Below are collected web resources.
+        librarian_agent = LibrarianAgent()
 
-{resources}
+        ta_agent = TeachingAssistantAgent()
 
-Your task:
-- Organize resources properly
-- Categorize by difficulty
-- Mention why resource is useful
-- Include books, videos, documentation, tutorials
-- Create a structured resource guide
+        # GENERATE CONTENT
+        professor_output = professor_agent.generate(topic)
 
-Use markdown headings.
-"""
+        advisor_output = advisor_agent.generate(topic)
 
-        librarian_output = ask_ai(
-            librarian_prompt,
-            f"Create a resource guide for learning {topic}"
+        librarian_output = librarian_agent.generate(topic)
+
+        ta_output = ta_agent.generate(topic)
+
+        # FILE PATHS
+        professor_file = os.path.join(
+            topic_folder,
+            "knowledge_base.docx"
         )
 
-       
-        ta_prompt = f"""
-You are Teaching Assistant Agent.
-
-Create a practice workbook for {topic}.
-
-Requirements:
-- Beginner exercises
-- Intermediate exercises
-- Advanced exercises
-- Coding challenges
-- MCQs
-- Assignments
-- Mini projects
-- Include answers and explanations
-
-Use markdown headings.
-"""
-
-        ta_output = ask_ai(
-            ta_prompt,
-            f"Create a practice workbook for {topic}"
+        advisor_file = os.path.join(
+            topic_folder,
+            "roadmap.docx"
         )
 
-       
+        librarian_file = os.path.join(
+            topic_folder,
+            "resources.docx"
+        )
 
-        os.makedirs("generated_docs", exist_ok=True)
+        ta_file = os.path.join(
+            topic_folder,
+            "practice_workbook.docx"
+        )
 
-        professor_file = f"generated_docs/{topic}_knowledge_base.docx"
-        advisor_file = f"generated_docs/{topic}_roadmap.docx"
-        librarian_file = f"generated_docs/{topic}_resources.docx"
-        ta_file = f"generated_docs/{topic}_practice_workbook.docx"
-
+        # CREATE DOCS
         create_doc(
             f"{topic} Knowledge Base",
             professor_output,
@@ -279,78 +120,246 @@ Use markdown headings.
             ta_file
         )
 
-        st.session_state.generated = True
+        # SAVE OUTPUTS
+        st.session_state.outputs = {
+            "professor": professor_output,
+            "advisor": advisor_output,
+            "librarian": librarian_output,
+            "ta": ta_output,
+            "files": {
+                "professor": professor_file,
+                "advisor": advisor_file,
+                "librarian": librarian_file,
+                "ta": ta_file
+            }
+        }
 
-      
-        st.success("✅ AI Teaching Team completed the learning package!")
+        logger.info(f"Generation completed for topic: {topic}")
 
-        tab1, tab2, tab3, tab4 = st.tabs([
-            "🧠 Professor",
-            "🗺️ Advisor",
-            "📚 Librarian",
-            "✍️ Teaching Assistant"
-        ])
+        return True
 
-        with tab1:
-            st.markdown(professor_output)
+    except Exception as e:
 
-        with tab2:
-            st.markdown(advisor_output)
+        logger.error(f"Main Generation Error: {str(e)}")
 
-        with tab3:
-            st.markdown(librarian_output)
+        st.error(f"Error: {str(e)}")
 
-        with tab4:
-            st.markdown(ta_output)
+        return False
 
-     
-        st.divider()
-        st.subheader("📥 Download Documents")
 
-        col1, col2 = st.columns(2)
 
-        with col1:
+# INPUT
+topic = st.text_input(
+    "Enter Topic",
+    placeholder="Example: Machine Learning"
+)
 
-            with open(professor_file, "rb") as f:
-                st.download_button(
-                    "Download Knowledge Base",
-                    data=f,
-                    file_name=os.path.basename(professor_file)
+
+# GENERATE BUTTON
+if st.button("Generate Learning Package"):
+
+    if topic:
+
+        with st.spinner("⏳ AI Agents are working..."):
+
+            success = generate_learning_package(topic)
+
+            if success:
+
+                st.success("✅ Learning package generated!")
+
+
+
+# SHOW OUTPUTS
+if st.session_state.outputs:
+
+    outputs = st.session_state.outputs
+
+    tab1, tab2, tab3, tab4,tab5 = st.tabs([
+        "Professor",
+        "Advisor",
+        "Librarian",
+        "Teaching Assistant",
+         "Ask Questions"
+    ])
+
+    with tab1:
+        st.markdown(outputs["professor"])
+
+    with tab2:
+        st.markdown(outputs["advisor"])
+
+    with tab3:
+        st.markdown(outputs["librarian"])
+
+    with tab4:
+        st.markdown(outputs["ta"])
+    
+    with tab5:
+
+        st.subheader("💬 Ask Questions")
+
+    topics = []
+
+    if os.path.exists("generated_docs"):
+
+        topics = [
+            folder
+            for folder in os.listdir("generated_docs")
+            if os.path.isdir(
+                os.path.join(
+                    "generated_docs",
+                    folder
+                )
+            )
+        ]
+
+    if topics:
+
+        rag_topic = st.selectbox(
+            "Choose Topic",
+            topics,
+            key="rag_topic"
+        )
+
+        # DISPLAY CHAT HISTORY
+        for message in st.session_state.messages:
+
+            with st.chat_message(message["role"]):
+
+                st.markdown(message["content"])
+
+        # USER INPUT
+        if prompt := st.chat_input(
+            "Ask a question about this topic..."
+        ):
+
+            # USER MESSAGE
+            st.chat_message("user").markdown(prompt)
+
+            st.session_state.messages.append({
+                "role": "user",
+                "content": prompt
+            })
+
+            # ASSISTANT RESPONSE
+            with st.chat_message("assistant"):
+
+                message_placeholder = st.empty()
+
+                message_placeholder.markdown(
+                    "🔍 Searching documents..."
                 )
 
-            with open(librarian_file, "rb") as f:
-                st.download_button(
-                    "Download Resource Guide",
-                    data=f,
-                    file_name=os.path.basename(librarian_file)
-                )
+                try:
 
-        with col2:
+                    answer, docs = ask_question(
+                        prompt,
+                        rag_topic
+                    )
 
-            with open(advisor_file, "rb") as f:
-                st.download_button(
-                    "Download Learning Roadmap",
-                    data=f,
-                    file_name=os.path.basename(advisor_file)
-                )
+                    message_placeholder.markdown(
+                        answer
+                    )
 
-            with open(ta_file, "rb") as f:
-                st.download_button(
-                    "Download Practice Workbook",
-                    data=f,
-                    file_name=os.path.basename(ta_file)
-                )
+                    # SOURCES
+                    with st.expander(
+                        "📚 View Sources"
+                    ):
+
+                        for i, doc in enumerate(docs):
+
+                            source = os.path.basename(
+                                doc.metadata.get(
+                                    "source",
+                                    "Unknown"
+                                )
+                            )
+
+                            st.write(
+                                f"### Source {i+1}: {source}"
+                            )
+
+                            st.caption(
+                                doc.page_content[:1000]
+                            )
+
+                    st.session_state.messages.append({
+                        "role": "assistant",
+                        "content": answer
+                    })
+
+                except Exception as e:
+
+                    st.error(f"RAG Error: {e}")
+
+    else:
+
+        st.info(
+            "Generate documents first to use RAG."
+        )
+
+    st.divider()
+
+    st.subheader("📥 Download Documents")
+
+    files = outputs["files"]
+
+    for key, filepath in files.items():
+
+        with open(filepath, "rb") as f:
+
+            st.download_button(
+                f"Download {key}",
+                data=f,
+                file_name=os.path.basename(filepath)
+            )
 
 
+
+# SIDEBAR
 with st.sidebar:
 
-    st.header("⚙️ Configuration")
+    st.header("📚 Generated Topics")
 
-    st.markdown("""
-### Required Environment Variables
+    os.makedirs("generated_docs", exist_ok=True)
 
-Create a `.env` file:
+    all_items = os.listdir("generated_docs")
 
-```env
-OPENAI_API_KEY=your_openai_key
-SERPAPI_API_KEY=your_serpapi_key""")
+    folders = []
+
+    # ONLY KEEP FOLDERS
+    for item in all_items:
+
+        full_path = os.path.join(
+            "generated_docs",
+            item
+        )
+
+        if os.path.isdir(full_path):
+
+            folders.append(item)
+
+    if folders:
+
+        selected_topic = st.selectbox(
+            "Select Topic",
+            folders
+        )
+
+        topic_path = os.path.join(
+            "generated_docs",
+            selected_topic
+        )
+
+        files = os.listdir(topic_path)
+
+        st.subheader("Documents")
+
+        for file in files:
+
+            st.write(f"📄 {file}")
+
+    else:
+
+        st.info("No generated topics yet")

@@ -1,0 +1,436 @@
+2026-05-18 09:46:25,719 | INFO | Generation started for topic: Retrieval Augumented Generation
+2026-05-18 09:46:25,935 | INFO | Sending request to Gemini
+2026-05-18 09:47:06,200 | INFO | Gemini response received
+2026-05-18 09:47:06,200 | INFO | Sending request to Gemini
+2026-05-18 09:47:45,737 | INFO | Gemini response received
+2026-05-18 09:47:45,737 | INFO | Searching resources for Retrieval Augumented Generation
+2026-05-18 09:47:49,405 | INFO | Resource search completed
+2026-05-18 09:47:49,405 | INFO | Sending request to Gemini
+2026-05-18 09:48:08,834 | INFO | Gemini response received
+2026-05-18 09:48:08,834 | INFO | Sending request to Gemini
+2026-05-18 09:50:02,553 | INFO | Gemini response received
+2026-05-18 09:50:02,638 | INFO | Creating document: generated_docs/retrieval_augumented_generation/knowledge_base.docx
+2026-05-18 09:59:08,301 | INFO | Generation started for topic: Retrieval Augmented Generation
+2026-05-18 09:59:08,304 | INFO | Sending request to Gemini
+2026-05-18 09:59:42,415 | INFO | Gemini response received
+2026-05-18 09:59:42,415 | INFO | Sending request to Gemini
+2026-05-18 10:00:18,725 | INFO | Gemini response received
+2026-05-18 10:00:18,725 | INFO | Searching resources for Retrieval Augmented Generation
+2026-05-18 10:00:20,868 | INFO | Resource search completed
+2026-05-18 10:00:20,869 | INFO | Sending request to Gemini
+2026-05-18 10:00:39,129 | INFO | Gemini response received
+2026-05-18 10:00:39,129 | INFO | Sending request to Gemini
+2026-05-18 10:02:18,070 | INFO | Gemini response received
+2026-05-18 10:02:18,071 | INFO | Creating document: generated_docs\retrieval_augmented_generation\knowledge_base.docx
+2026-05-18 10:02:24,299 | INFO | Saved document: generated_docs\retrieval_augmented_generation\knowledge_base.docx
+2026-05-18 10:02:24,299 | INFO | Creating document: generated_docs\retrieval_augmented_generation\roadmap.docx
+2026-05-18 10:02:27,673 | INFO | Saved document: generated_docs\retrieval_augmented_generation\roadmap.docx
+2026-05-18 10:02:27,673 | INFO | Creating document: generated_docs\retrieval_augmented_generation\resources.docx
+2026-05-18 10:02:31,315 | INFO | Saved document: generated_docs\retrieval_augmented_generation\resources.docx
+2026-05-18 10:02:31,315 | INFO | Creating document: generated_docs\retrieval_augmented_generation\practice_workbook.docx
+2026-05-18 10:02:47,315 | INFO | Saved document: generated_docs\retrieval_augmented_generation\practice_workbook.docx
+2026-05-18 10:02:47,467 | INFO | Generation completed for topic: Retrieval Augmented Generation
+2026-05-18 10:10:54,791 | INFO | Generation started for topic: Retrieval Augumented Generation
+2026-05-18 10:10:54,804 | INFO | Sending request to Gemini
+2026-05-18 10:11:28,809 | INFO | Gemini response received
+2026-05-18 10:11:28,809 | INFO | Sending request to Gemini
+2026-05-18 10:11:55,673 | INFO | Gemini response received
+2026-05-18 10:11:55,674 | INFO | Searching resources for Retrieval Augumented Generation
+2026-05-18 10:11:57,370 | INFO | Resource search completed
+2026-05-18 10:11:57,370 | INFO | Sending request to Gemini
+2026-05-18 10:12:16,198 | INFO | Gemini response received
+2026-05-18 10:12:16,198 | INFO | Sending request to Gemini
+2026-05-18 10:13:34,927 | INFO | Gemini response received
+2026-05-18 10:13:34,928 | INFO | Creating document: generated_docs\retrieval_augumented_generation\knowledge_base.docx
+2026-05-18 10:13:35,038 | INFO | Saved document: generated_docs\retrieval_augumented_generation\knowledge_base.docx
+2026-05-18 10:13:35,038 | INFO | Creating document: generated_docs\retrieval_augumented_generation\roadmap.docx
+2026-05-18 10:13:35,154 | INFO | Saved document: generated_docs\retrieval_augumented_generation\roadmap.docx
+2026-05-18 10:13:35,155 | INFO | Creating document: generated_docs\retrieval_augumented_generation\resources.docx
+2026-05-18 10:13:35,237 | INFO | Saved document: generated_docs\retrieval_augumented_generation\resources.docx
+2026-05-18 10:13:35,237 | INFO | Creating document: generated_docs\retrieval_augumented_generation\practice_workbook.docx
+2026-05-18 10:13:35,670 | INFO | Saved document: generated_docs\retrieval_augumented_generation\practice_workbook.docx
+2026-05-18 10:13:35,674 | INFO | Generation completed for topic: Retrieval Augumented Generation
+2026-05-18 11:14:11,124 | INFO | Generation started for topic: Retrieval Augumented Generation
+2026-05-18 11:14:11,126 | INFO | Sending request to Gemini
+2026-05-18 11:14:48,929 | INFO | Gemini response received
+2026-05-18 11:14:48,930 | INFO | Sending request to Gemini
+2026-05-18 11:15:17,808 | INFO | Gemini response received
+2026-05-18 11:15:17,809 | INFO | Searching resources for Retrieval Augumented Generation
+2026-05-18 11:15:26,924 | INFO | Resource search completed
+2026-05-18 11:15:26,924 | INFO | Sending request to Gemini
+2026-05-18 11:15:48,833 | INFO | Gemini response received
+2026-05-18 11:15:48,833 | INFO | Sending request to Gemini
+2026-05-18 11:17:34,107 | INFO | Gemini response received
+2026-05-18 11:17:34,108 | INFO | Creating document: generated_docs\retrieval_augumented_generation\knowledge_base.docx
+2026-05-18 11:17:34,267 | INFO | Saved document: generated_docs\retrieval_augumented_generation\knowledge_base.docx
+2026-05-18 11:17:34,267 | INFO | Creating document: generated_docs\retrieval_augumented_generation\roadmap.docx
+2026-05-18 11:17:34,385 | INFO | Saved document: generated_docs\retrieval_augumented_generation\roadmap.docx
+2026-05-18 11:17:34,386 | INFO | Creating document: generated_docs\retrieval_augumented_generation\resources.docx
+2026-05-18 11:17:34,478 | INFO | Saved document: generated_docs\retrieval_augumented_generation\resources.docx
+2026-05-18 11:17:34,479 | INFO | Creating document: generated_docs\retrieval_augumented_generation\practice_workbook.docx
+2026-05-18 11:17:35,167 | INFO | Saved document: generated_docs\retrieval_augumented_generation\practice_workbook.docx
+2026-05-18 11:17:35,168 | INFO | Generation completed for topic: Retrieval Augumented Generation
+2026-05-18 11:55:43,318 | INFO | Generation started for topic: Machine Learning
+2026-05-18 11:55:43,319 | INFO | Sending request to Gemini
+2026-05-18 11:56:23,560 | INFO | Gemini response received
+2026-05-18 11:56:23,561 | INFO | Sending request to Gemini
+2026-05-18 11:56:55,930 | INFO | Gemini response received
+2026-05-18 11:56:55,931 | INFO | Searching resources for Machine Learning
+2026-05-18 11:57:00,224 | INFO | Resource search completed
+2026-05-18 11:57:00,225 | INFO | Sending request to Gemini
+2026-05-18 11:57:16,929 | INFO | Gemini response received
+2026-05-18 11:57:16,930 | INFO | Sending request to Gemini
+2026-05-18 11:58:30,160 | INFO | Gemini response received
+2026-05-18 11:58:30,161 | INFO | Creating document: generated_docs\machine_learning\knowledge_base.docx
+2026-05-18 11:58:30,384 | INFO | Saved document: generated_docs\machine_learning\knowledge_base.docx
+2026-05-18 11:58:30,385 | INFO | Creating document: generated_docs\machine_learning\roadmap.docx
+2026-05-18 11:58:30,522 | INFO | Saved document: generated_docs\machine_learning\roadmap.docx
+2026-05-18 11:58:30,523 | INFO | Creating document: generated_docs\machine_learning\resources.docx
+2026-05-18 11:58:30,604 | INFO | Saved document: generated_docs\machine_learning\resources.docx
+2026-05-18 11:58:30,604 | INFO | Creating document: generated_docs\machine_learning\practice_workbook.docx
+2026-05-18 11:58:30,985 | INFO | Saved document: generated_docs\machine_learning\practice_workbook.docx
+2026-05-18 11:58:30,985 | INFO | Generation completed for topic: Machine Learning
+2026-05-18 12:01:50,832 | INFO | Generation started for topic: Agentic AI
+2026-05-18 12:01:50,840 | INFO | Sending request to Gemini
+2026-05-18 12:01:53,714 | ERROR | Gemini Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 36.879865169s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 36
+}
+]
+2026-05-18 12:01:53,715 | INFO | Sending request to Gemini
+2026-05-18 12:01:54,956 | ERROR | Gemini Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 36.477400439s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 36
+}
+]
+2026-05-18 12:01:54,957 | INFO | Searching resources for Agentic AI
+2026-05-18 12:01:58,941 | INFO | Resource search completed
+2026-05-18 12:01:58,942 | INFO | Sending request to Gemini
+2026-05-18 12:01:59,445 | ERROR | Gemini Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 31.246428357s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 31
+}
+]
+2026-05-18 12:01:59,445 | INFO | Sending request to Gemini
+2026-05-18 12:02:04,665 | ERROR | Gemini Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 30.746916948s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 30
+}
+]
+2026-05-18 12:02:04,665 | INFO | Creating document: generated_docs\agentic_ai\knowledge_base.docx
+2026-05-18 12:02:04,722 | INFO | Saved document: generated_docs\agentic_ai\knowledge_base.docx
+2026-05-18 12:02:04,722 | INFO | Creating document: generated_docs\agentic_ai\roadmap.docx
+2026-05-18 12:02:04,776 | INFO | Saved document: generated_docs\agentic_ai\roadmap.docx
+2026-05-18 12:02:04,777 | INFO | Creating document: generated_docs\agentic_ai\resources.docx
+2026-05-18 12:02:04,834 | INFO | Saved document: generated_docs\agentic_ai\resources.docx
+2026-05-18 12:02:04,834 | INFO | Creating document: generated_docs\agentic_ai\practice_workbook.docx
+2026-05-18 12:02:04,890 | INFO | Saved document: generated_docs\agentic_ai\practice_workbook.docx
+2026-05-18 12:02:04,890 | INFO | Generation completed for topic: Agentic AI
+2026-05-18 12:03:26,677 | INFO | Generation started for topic: Agentic AI
+2026-05-18 12:03:26,679 | INFO | Sending request to Gemini
+2026-05-18 12:03:27,302 | ERROR | Gemini Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 3.299836011s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 3
+}
+]
+2026-05-18 12:03:27,303 | INFO | Sending request to Gemini
+2026-05-18 12:03:27,714 | ERROR | Gemini Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 2.892172249s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 2
+}
+]
+2026-05-18 12:03:27,715 | INFO | Searching resources for Agentic AI
+2026-05-18 12:03:33,052 | INFO | Resource search completed
+2026-05-18 12:03:33,052 | INFO | Sending request to Gemini
+2026-05-18 12:03:33,464 | ERROR | Gemini Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 57.144778329s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 57
+}
+]
+2026-05-18 12:03:33,465 | INFO | Sending request to Gemini
+2026-05-18 12:03:33,870 | ERROR | Gemini Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 56.735905578s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 56
+}
+]
+2026-05-18 12:03:33,870 | INFO | Creating document: generated_docs\agentic_ai\knowledge_base.docx
+2026-05-18 12:03:33,925 | INFO | Saved document: generated_docs\agentic_ai\knowledge_base.docx
+2026-05-18 12:03:33,926 | INFO | Creating document: generated_docs\agentic_ai\roadmap.docx
+2026-05-18 12:03:33,981 | INFO | Saved document: generated_docs\agentic_ai\roadmap.docx
+2026-05-18 12:03:33,982 | INFO | Creating document: generated_docs\agentic_ai\resources.docx
+2026-05-18 12:03:34,039 | INFO | Saved document: generated_docs\agentic_ai\resources.docx
+2026-05-18 12:03:34,040 | INFO | Creating document: generated_docs\agentic_ai\practice_workbook.docx
+2026-05-18 12:03:34,097 | INFO | Saved document: generated_docs\agentic_ai\practice_workbook.docx
+2026-05-18 12:03:34,098 | INFO | Generation completed for topic: Agentic AI
+2026-05-18 12:04:35,733 | INFO | Generation started for topic: Agentic AI
+2026-05-18 12:04:35,734 | INFO | Sending request to Gemini
+2026-05-18 12:04:36,951 | ERROR | Gemini Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 54.248690062s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 54
+}
+]
+2026-05-18 12:04:36,951 | INFO | Sending request to Gemini
+2026-05-18 12:04:37,356 | ERROR | Gemini Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 53.236792288s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 53
+}
+]
+2026-05-18 12:04:37,356 | INFO | Searching resources for Agentic AI
+2026-05-18 12:04:39,516 | INFO | Resource search completed
+2026-05-18 12:04:39,516 | INFO | Sending request to Gemini
+2026-05-18 12:04:40,122 | ERROR | Gemini Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 50.662590382s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 50
+}
+]
+2026-05-18 12:04:40,122 | INFO | Sending request to Gemini
+2026-05-18 12:04:40,653 | ERROR | Gemini Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 50.086377454s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 50
+}
+]
+2026-05-18 12:04:40,654 | INFO | Creating document: generated_docs\agentic_ai\knowledge_base.docx
+2026-05-18 12:04:40,719 | INFO | Saved document: generated_docs\agentic_ai\knowledge_base.docx
+2026-05-18 12:04:40,720 | INFO | Creating document: generated_docs\agentic_ai\roadmap.docx
+2026-05-18 12:04:40,773 | INFO | Saved document: generated_docs\agentic_ai\roadmap.docx
+2026-05-18 12:04:40,774 | INFO | Creating document: generated_docs\agentic_ai\resources.docx
+2026-05-18 12:04:40,826 | INFO | Saved document: generated_docs\agentic_ai\resources.docx
+2026-05-18 12:04:40,826 | INFO | Creating document: generated_docs\agentic_ai\practice_workbook.docx
+2026-05-18 12:04:40,882 | INFO | Saved document: generated_docs\agentic_ai\practice_workbook.docx
+2026-05-18 12:04:40,884 | INFO | Generation completed for topic: Agentic AI
+2026-05-18 14:25:47,000 | INFO | Generation started for topic: Agentic AI
+2026-05-18 14:25:47,007 | INFO | Sending request to Gemini
+2026-05-18 14:26:31,944 | INFO | Gemini response received
+2026-05-18 14:26:31,945 | INFO | Sending request to Gemini
+2026-05-18 14:27:05,629 | INFO | Gemini response received
+2026-05-18 14:27:05,629 | INFO | Searching resources for Agentic AI
+2026-05-18 14:27:10,064 | INFO | Resource search completed
+2026-05-18 14:27:10,064 | INFO | Sending request to Gemini
+2026-05-18 14:27:27,969 | INFO | Gemini response received
+2026-05-18 14:27:27,970 | INFO | Sending request to Gemini
+2026-05-18 14:28:42,605 | INFO | Gemini response received
+2026-05-18 14:28:42,605 | INFO | Creating document: generated_docs\agentic_ai\knowledge_base.docx
+2026-05-18 14:28:42,870 | INFO | Saved document: generated_docs\agentic_ai\knowledge_base.docx
+2026-05-18 14:28:42,870 | INFO | Creating document: generated_docs\agentic_ai\roadmap.docx
+2026-05-18 14:28:43,000 | INFO | Saved document: generated_docs\agentic_ai\roadmap.docx
+2026-05-18 14:28:43,000 | INFO | Creating document: generated_docs\agentic_ai\resources.docx
+2026-05-18 14:28:43,087 | INFO | Saved document: generated_docs\agentic_ai\resources.docx
+2026-05-18 14:28:43,088 | INFO | Creating document: generated_docs\agentic_ai\practice_workbook.docx
+2026-05-18 14:28:43,363 | INFO | Saved document: generated_docs\agentic_ai\practice_workbook.docx
+2026-05-18 14:28:43,364 | INFO | Generation completed for topic: Agentic AI
